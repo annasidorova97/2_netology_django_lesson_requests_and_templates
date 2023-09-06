@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="color: blue; font-size: 20px">
+    Hello from Django
+    {{test}}
+</p>
+<ul style="color: red">
+{% for i in data %}
+    {% if i > 4 %}
+    <li>{{i}}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+{{ val.upper }}
+</body>
+</html>

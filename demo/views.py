@@ -5,9 +5,12 @@ from django.shortcuts import render
 
 
 def hello_view(request):
-    name = request.GET.get('name', 'Vasya')  # работает, как со словарем по ключу name, если нет name, то вернется Vasya
-    age = int(request.GET['age'])  # сработает только если задан в запросе параметр age=n
-    return HttpResponse(f'Hello {name}')
+    context = {
+        'test': 5,
+        'data': [1, 5, 8, 12],
+        'val': 'hello'
+    }
+    return render(request, 'demo.html', context)
 
 
 def sum_view(request, a, b):
